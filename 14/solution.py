@@ -106,7 +106,6 @@ with open('real-input.txt') as f:
             break
 
     # paint cave
-    cave = []
     x_options = []
     for p in resting_sand:
         x_options.append(p[0])
@@ -129,13 +128,8 @@ with open('real-input.txt') as f:
                 c = '*'
             elif p[1] == max_y + 2:
                 c = '#'
-            row.append(c)
-
-        cave.append(row)
-
-    for row in cave:
-        for c in row:
             print(c, end='')
+
         print()
 
-    print('Part 1: ', len(resting_sand))
+    print('Part 2: ', len(resting_sand))
